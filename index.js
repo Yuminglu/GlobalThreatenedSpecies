@@ -163,7 +163,7 @@ function render(data, Category, year) {
       tooltipSvg.selectAll("*").remove();
       div
         .transition()
-        .duration(500)
+        .duration(200)
         .style("opacity", 0);
     });
 }
