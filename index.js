@@ -194,7 +194,7 @@ function plotTooltip(id, country_name, Year) {
   let yScale = d3
   .scaleLinear()
   .domain(valueDomain)
-  .range([250, 50]);
+  .range([265, 120]);
 let yAxis2 = tooltipSvg
   .append("g")
   .attr("transform", "translate(50,0)")
@@ -207,10 +207,10 @@ let xScale = d3
   .scaleLinear()
   // .domain([yearLimits[0], yearLimits[1]])
   .domain(yearDomain)
-  .range([50, 250]);
+  .range([50, 275]);
 let xAxis2 = tooltipSvg
   .append("g")
-  .attr("transform", "translate(0,250)")
+  .attr("transform", "translate(0,265)")
   .call(d3.axisBottom(xScale));
   //let line = d3
   //  .line()
@@ -242,6 +242,50 @@ let xAxis2 = tooltipSvg
     .attr("fill", "none")
     .attr("stroke-width",2)
     .attr("stroke", d => color(d.key));
+
+    tooltipSvg
+      .append("text")
+      .attr("x", 35)
+      .attr("y", 60)
+      .attr("font-size", "10pt")
+      .text("Vertebrates");
+      // .text("Year: " + Year);
+
+      tooltipSvg
+        .append("circle")
+        .attr("cx", 25)
+        .attr("cy", 55)
+        .attr("r", 6)
+        .style("fill", "#56957D")
+
+      tooltipSvg
+        .append("text")
+        .attr("x", 35)
+        .attr("y", 80)
+        .attr("font-size", "10pt")
+        .text("Invertebrates");
+
+        tooltipSvg
+          .append("circle")
+          .attr("cx", 25)
+          .attr("cy", 75)
+          .attr("r", 6)
+          .style("fill", "#BCA79A")
+
+
+        tooltipSvg
+          .append("text")
+          .attr("x", 35)
+          .attr("y", 100)
+          .attr("font-size", "10pt")
+          .text("Plants");
+
+          tooltipSvg
+            .append("circle")
+            .attr("cx", 25)
+            .attr("cy", 95)
+            .attr("r", 6)
+            .style("fill", "#C1776B")
 
   tooltipSvg
     .append("text")
