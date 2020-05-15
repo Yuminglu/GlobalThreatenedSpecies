@@ -41,9 +41,9 @@ Promise.all([d3.csv("Species8.csv"), d3.json("countries.geo.json")]).then(
 let mapdata = "";
 let allData = "";
 let hostData = "";
-let currentYear = "2004";
+let currentYear = "2015";
 let currentCategory = "";
-let years = [2004, 2010, 2015, 2016, 2017, 2018, 2019];
+let years = [2015, 2016, 2017, 2018, 2019];
 
 var sliderStep = d3
   .sliderBottom()
@@ -52,7 +52,7 @@ var sliderStep = d3
   .width(300)
   .ticks(5)
   .step(1)
-  .default(2004)
+  .default(2015)
   .on("onchange", val => {
     currentYear = val;
     render(allData, currentCategory, currentYear);
