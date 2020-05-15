@@ -1,0 +1,112 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <style>
+
+  .header h1{
+    font-family: Didot;
+    color: white;
+    position: relative;
+    top: 50px;
+    text-align: center;
+  }
+
+  body {
+    background-color: #211D1E;
+  }
+  .selected {
+    fill: #be4c27;
+  }
+  .control-group {
+    position: relative;
+    text-align: center;
+    color: white;
+    top: 7%;
+    display: flex;
+    padding-left: 30%;
+    padding-right: 30%;
+    justify-content: space-around;
+  }
+
+   button{
+     color:white;
+     background: none;
+     font-family: Didot;
+     font-style: normal;
+     font-weight: normal;
+     font-size: 12px;
+     border: none;
+   }
+
+   button span { color:white!important }
+
+  .category: hover {
+    fill: #be4c27;
+  }
+
+  .button: active{
+    color: #be4c27;
+  }
+
+  .tooltip {
+    position: absolute;
+    text-align: center;
+    width: 300px;
+    height: 300px;
+    padding: 2px;
+    font: 12px sans-serif;
+    /* font-family: Didot; */
+    background: white;
+    border: 0;
+    border-radius: 10px;
+    pointer-events: none;
+  }
+
+  .slider{
+      width: 1000px;
+  }
+  </style>
+
+  <body>
+    <div class="header">
+      <h1>
+        Global Threatened Species
+      </h1>
+    </div>
+    <div class="control-group">
+      <button onclick="select('Vertebrates')" color=white>
+        <img class="butttonimage" src="Vertebrate.svg" width=40%>
+        <p>Vertebrates</p>
+      </button>
+      <button onclick="select('Invertebrates')">
+        <img src="Invertebrate.svg" width=40%>
+        <p>Invertebrates</p>
+      </button>
+      <button onclick="select('Plants')">
+        <img src="Plant.svg" width=40%>
+        <p>Plants</p>
+      </button>
+      <button onclick="select('Total')">
+        <img src="Total.svg" width=40%>
+        <p>Total</p>
+      </button>
+    </div>
+    <br />
+    <div class="row align-items-center">
+      <div class="col-sm"><div id="slider-step"></div></div>
+        </div>
+
+    <svg id="container" height="400" width="1400">
+      <g id="body" transform="translate(0,0)"></g>
+    </svg>
+    <div class="tooltip"></div>
+  </body>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://d3js.org/topojson.v1.min.js"></script>
+  <script src="https://d3js.org/d3-color.v1.min.js"></script>
+  <script src="https://d3js.org/d3-interpolate.v1.min.js"></script>
+  <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+  <script src="https://unpkg.com/d3-simple-slider"></script>
+  <script src="./index.js"></script>
+</html>

@@ -1,0 +1,73 @@
+.header h1{
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+body {
+  background-color: #211D1E;
+  /* background-color: #193642;  */
+  /* background-color: #0E1122;  */
+}
+.selected {
+  fill: #be4c27;
+}
+button {
+  background-color: #99836e;
+  border: none;
+}
+.slidecontainer {
+  width: 100%;
+}
+
+.header h1 {
+  color: black;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 150px;
+  height: 15px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #4caf50;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #4caf50;
+  cursor: pointer;
+}
+
+.category: hover {
+  fill: #be4c27;
+}
+
+.tooltip {
+  position: absolute;
+  text-align: center;
+  width: 500px;
+  height: 500px;
+  padding: 2px;
+  font: 12px sans-serif;
+  background: lightsteelblue;
+  border: 0;
+  border-radius: 8px;
+  pointer-events: none;
+}
