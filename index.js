@@ -42,7 +42,7 @@ let mapdata = "";
 let allData = "";
 let hostData = "";
 let currentYear = "2015";
-let currentCategory = "";
+let currentCategory = "Total";
 let years = [2015, 2016, 2017, 2018, 2019];
 
 var sliderStep = d3
